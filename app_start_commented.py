@@ -39,7 +39,8 @@ EMOJI_DICT = {
     "python": "🐍",
     "fire": "🔥"
     # Students can add more!
-} "demon":"👹",
+} 
+"demon":"👹",
 "smileteer":"🥲",
 "paislie":"🎅",
 "sloth":"🦥",
@@ -74,7 +75,9 @@ st.markdown("---")  # Adds a horizontal line
 # We store whatever the user types in a variable called `user_input`.
 #
 user_input = st.text_input("Enter your text to translate:")
-
+if "secret" in user_input.lower():
+st.write("🎉 YOU FOUND THE SECRET! 🎉 ")
+          
 # --- 6. "TRANSLATE" THE TEXT ---
 # This is where the main logic happens!
 
@@ -83,6 +86,7 @@ user_input = st.text_input("Enter your text to translate:")
 # e.g., "My Cat is cool" -> ["my", "cat", "is", "cool"]
 words = user_input.lower().split()
 
+    
 # We create a new, empty list to store our translated words.
 translated_words = []
 
